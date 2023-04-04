@@ -30,3 +30,36 @@ body {
   text-align: center;
   margin-top: 45vh;
 }
+
+.error2 {
+  text-align: center;
+}
+
+.btn-excuse {
+  margin: auto;
+  margin-top: 10%;
+  text-align: center;
+  border: 2px solid black;
+  width: 20%;
+  padding: 12px;
+  border-radius: 8px ;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+
+}
+
+.btn-excuse:hover {
+  transform: scale(1.2);
+  transition: 0.4s;
+  cursor: pointer;
+}
+.title, .excuse-message {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.title {
+  color: gray;
+  font-size: 48px;
+}

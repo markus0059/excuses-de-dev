@@ -16,6 +16,10 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {% block body %}
+         <h1 class="title">Mon générateur d'excuses</h1>
+         <h2 class="excuse-message">{{ randexcuse.message }}</h2>
+         <div class="btn-excuse"onclick="window.location.href='/'">Charger une autre donnée</div>
+        {% endblock %}
     </body>
 </html>
