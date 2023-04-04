@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(246, 246, 246);
+}
+
+/* display les excuses par 3 sur chaque ligne et sous forme de carte */
+.cardExcuses {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  align-items: center;
+}
+
+.cardExcuse {
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.textlost {
+  color: blue;
+  font-size: 36px;
+  text-align: center;
+  margin: auto;
+}
+
+.error {
+  color: red;
+  font-size: 72px;
+  text-align: center;
+  margin-top: 45vh;
+}

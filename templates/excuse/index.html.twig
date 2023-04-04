@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<div class="cardExcuses">
+
+  {# itérer sur chaque excuse et afficher les données #}
+		{% for excuse in excuses %}
+			<div class="cardExcuse">
+				<h1>Http_code :{{excuse.httpcode}}</h1>
+				<h2>tag :
+					{{ excuse.tag }}</h2>
+				<p>Message :
+					{{ excuse.message }}</p>
+			</div>
+		{% endfor %}
+	</div>
+
+{% endblock %}
