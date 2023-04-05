@@ -31,8 +31,9 @@ To do this, you must duplicate the .env file and copy it into your .env.local fi
 
 Attention, by default Symfony offers a preconfigured line for the PostgreSQL DBMS and not for MySQL.
 We choose to stay on MySQL, you must instead use the commented line just above and starting with mysql, and remember to comment the line for PostgreSQL.
-# .env.local
-DATABASE_URL="mysql://your_username:your_pwd@127.0.0.1:3306/wild-series?serverVersion=8.0"
+
+In your file .env.local
+DATABASE_URL="mysql://your_username:your_pwd@127.0.0.1:3306/your_dbname?serverVersion=8.0"
 
 
 2. Once that's done, all you have to do is check if everything is well "wired" by creating the database, using the command:
