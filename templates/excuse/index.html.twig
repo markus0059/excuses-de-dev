@@ -2,17 +2,20 @@
 
 {% block body %}
 
-	<div class="cardExcuses">
+	<div
+		class="cardExcuses">
 
-  {# itérer sur chaque excuse et afficher les données #}
+		{# itérer sur chaque excuse et afficher les données #}
 		{% for excuse in excuses %}
-			<div class="cardExcuse">
-				<h1>Http_code :{{excuse.httpcode}}</h1>
-				<h2>tag :
-					{{ excuse.tag }}</h2>
-				<p>Message :
-					{{ excuse.message }}</p>
-			</div>
+			<a href="/$http_code/{{excuse.httpcode}}">
+				<div class="cardExcuse">
+					<h1>Http_code :{{excuse.httpcode}}</h1>
+					<h2>tag :
+						{{ excuse.tag }}</h2>
+					<p>Message :
+						{{ excuse.message }}</p>
+				</div>
+			</a>
 		{% endfor %}
 	</div>
 

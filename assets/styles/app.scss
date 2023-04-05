@@ -1,0 +1,238 @@
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(246, 246, 246);
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 1px;
+
+}
+
+// navbar CSS
+.nav {
+  height: 50px;
+  background-color: black;
+  width: 100%;
+}
+.links {
+  display: flex;
+  align-items: center;
+  height: 50px;
+
+}
+.links a{
+  margin-top: 50%;
+
+}
+
+.nav a {
+  color: rgb(235, 196, 0);
+  text-decoration: none;
+  margin:auto;
+
+}
+// list excuses CSS
+
+/* display les excuses par 3 sur chaque ligne et sous forme de carte */
+
+.cardExcuses a {
+  text-decoration: none;
+  color: black;
+}
+.cardExcuses {
+  margin: 20px 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  align-items: center;
+}
+
+.cardExcuse {
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 8px;
+  background-color: #131313;
+  color: rgb(159, 159, 158);
+
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.4s;
+    cursor: pointer;
+  }
+}
+
+.textlost {
+  color: blue;
+  font-size: 36px;
+  text-align: center;
+  margin: auto;
+}
+
+// show excuse
+
+.show-excuse{
+  margin: auto;
+  text-align: center;
+}
+
+
+// Page Error CSS
+
+.error {
+  color: red;
+  font-size: 72px;
+  text-align: center;
+  margin-top: 45vh;
+}
+
+.error2 {
+  text-align: center;
+}
+
+// home Acueil CSS
+
+.btn-excuse {
+  margin: auto;
+  margin-top: 10%;
+  text-align: center;
+  border: 2px solid black;
+  width: 20%;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.4s;
+    cursor: pointer;
+  }
+}
+
+.title,
+.excuse-message {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.title {
+  color: gray;
+  font-size: 48px;
+}
+
+// modal Add Excuse CSS
+
+.modal-btn {
+  padding: 10px;
+  font-size: 16px;
+  margin: 50px auto;
+  display: block;
+  cursor: pointer;
+  min-width: 150px;
+  border-radius: 8px;
+  background-color: rgb(235, 196, 0);
+  border: none;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.4s;
+  }
+}
+
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+
+}
+
+.modal-container.active {
+  display: block;
+
+}
+
+.overlay {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(140, 140, 140, 0.656);
+}
+
+.modal {
+  position: absolute;
+  width: 95%;
+  max-width: 500px;
+  min-width: 300px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 8px;
+  top:40%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  background: #ff6767ce ;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+
+}
+
+// formulaire
+
+.form-label {
+  margin-right: 20px;
+}
+
+.row {
+  text-align: center;
+  margin-right: 25%;
+}
+
+.form-control {
+  background-color: rgb(163, 251, 251);
+  height: 30px;
+  margin-bottom: 8px;
+}
+
+.btn {
+  display: block;
+  background-color: rgb(126, 207, 96);
+  text-align: center;
+  margin: 20px auto;
+  padding: 8px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.4s;
+  }
+}
+
+.title-form {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.mb-3 {
+  display: flex;
+  justify-content: flex-end;
+}

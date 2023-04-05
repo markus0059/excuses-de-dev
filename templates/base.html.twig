@@ -1,25 +1,62 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
-        {% block option %}
-        {% endblock %}
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Welcome!
+			{% endblock %}
+		</title>
+      {% block link %}
+			{% endblock %}
+		<link
+		rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+		href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}
-         <h1 class="title">Mon générateur d'excuses</h1>
-         <h2 class="excuse-message">{{ randexcuse.message }}</h2>
-         <div class="btn-excuse"onclick="window.location.href='/'">Charger une autre donnée</div>
-        {% endblock %}
-    </body>
+		{# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+
+
+		{% block stylesheets %}
+			{{ encore_entry_link_tags('app') }}
+		{% endblock %}
+
+
+		{% block option %}{% endblock %}
+
+		{% block javascripts %}
+			{{ encore_entry_script_tags('app') }}
+      {{ encore_entry_script_tags('formjs') }}
+
+		{% endblock %}
+	</head>
+	<body>
+
+  {# barre de navigation #}
+		<div class="nav">
+			<div class="links">
+       <a href="/">Home</a>
+       <a href="/list">Liste des excuses</a>
+      </div>
+		</div>
+		{% block body %}
+			<h1 class="title">Mon générateur d'excuses</h1>
+			<h2 class="excuse-message">{{ randexcuse.message }}</h2>
+			<div class="btn-excuse" onclick="window.location.href='/'">Charger une autre donnée</div>
+
+  {# modal du formulaire #}
+			<div class="modal-container">
+				<div class="overlay modal-trigger"></div>
+        <div class="modal">
+        <button class="close-modal modal-trigger">X</button>
+        {{ include('excuse/add.html.twig') }}
+        </div>
+			</div>
+
+			<button class="modal-btn modal-trigger">Ajouter une nouvelle Excuse
+			</button>
+
+		{% endblock %}
+	</body>
 </html>

@@ -1,0 +1,16 @@
+{{ form_start(form) }}
+
+<div class="row">
+	<div class="col">
+		{{ form_row(form.httpcode) }}
+	</div>
+	<div class="col" id="mail">
+		{{ form_row(form.tag) }}
+	</div>
+	<div class="col" id="myOtherCustomId">
+		{{ form_row(form.message) }}
+	</div>
+</div>
+
+<button class="btn">{{ button_label|default('Valider') }}</button>
+{{ form_end(form) }}
