@@ -1,8 +1,8 @@
 # excuses-de-dev
-application qui renvoie des excuses aléatoirement suivant une base de données créer
+application that sends excuses randomly according to a database created
 
-utilisation de Symfony 5.4.19
-DB: MySQL
+1. use Symfony 5.4.19
+2. DataBase: MySQL
 
 ### Prerequisites
 
